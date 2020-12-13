@@ -1,0 +1,38 @@
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<table class="table table-hover">
+  <tr *ngFor="let rec of rs.allReclam">
+    <td>{{rec.email}}</td>
+    <td>{{rec.objet}}</td>
+    <td>{{rec.description}}</td>
+    <td>
+      <a class="btn" (click)="editRec(rec)">
+        <i class="fa fa-edit" style="font-size:17px"></i>
+      </a>
+    </td>
+    <td>
+      <a class="btn text-danger" style="font-size:17px" (click)="deleteRec(rec.id)">
+        <i class="fa fa-trash"></i>
+      </a>
+    </td>
+
+  </tr>
+</table>

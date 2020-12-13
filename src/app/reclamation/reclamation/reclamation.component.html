@@ -1,0 +1,33 @@
+
+<div class="emp-form">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input placeholder="email" class="form-control" name="email" required [(ngModel)]="rs.currentRec.email" >
+    </div>
+    <div class="col-md-6 form-group">
+      <input placeholder="objet" class="form-control" [(ngModel)]="rs.currentRec.objet">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <textarea  placeholder="Description" class="form-control" [(ngModel)]="rs.currentRec.description"></textarea>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <button class="btn btn-success btn-lg btn-block" (click)="createOrUpdateReclamation(rs.currentRec)">
+        <i class="fa fa-save"></i>
+        SAVE
+      </button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-lg btn-block" (click)="clear()">
+        <i class="fa fa-retweet"></i>
+        CLEAR
+      </button>
+    </div>
+  </div>
+</div>
+

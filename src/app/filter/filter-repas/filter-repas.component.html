@@ -1,0 +1,37 @@
+
+<div class="container">
+<div style="text-align: center">
+  <h1 style="color: navy">Repas</h1>
+  <br/> </div>
+
+<div style="text-align: center">
+  <input class="form-control form-control-lg" type="text" placeholder="Enter le prix du repas" [(ngModel)]="saerchName">
+</div>
+<br><br>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+
+      <th>Image</th>
+
+      <th>Prix de repas</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let r of list | filter:saerchName">
+
+      <td><img src="{{r.img}}" height="80px" width="120px" alt=""></td>
+
+      <td>Prix <strong>{{r["prix"]}}</strong> dinars</td>
+      <td> <strong>{{r["description"]}}</strong> </td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
